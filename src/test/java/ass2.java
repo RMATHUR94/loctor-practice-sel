@@ -3,6 +3,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import java.util.List;
@@ -10,12 +11,13 @@ import java.util.List;
 public class ass2 {
     WebDriver driver;
     @Test
-    public void ass2()
+    @Parameters({"url"})
+    public void ass2(String url) throws InterruptedException
     {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.get("https://www.worldometers.info/world-population/");
+        driver.get(url);
         long endtime = System.currentTimeMillis()+ 20000;
         while(System.currentTimeMillis()<endtime)
         {

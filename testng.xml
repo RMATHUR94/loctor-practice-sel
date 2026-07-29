@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="DatadrivenTest" parallel="false">
+    <test name="DatadrivenTest">
+    <parameter name="url" value="https://www.worldometers.info/world-population/"/>
+        <classes>
+            <class name="ass2"/>
+        </classes>
+    </test>
+</suite>
