@@ -56,5 +56,12 @@
       <version>5.5.1</version>
       <scope>compile</scope>
     </dependency>
+
+    <!-- ExtentReports for detailed HTML test reporting -->
+    <dependency>
+      <groupId>com.aventstack</groupId>
+      <artifactId>extentreports</artifactId>
+      <version>5.1.1</version>
+    </dependency>
   </dependencies>
 </project>

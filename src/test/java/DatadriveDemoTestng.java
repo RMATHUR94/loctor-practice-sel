@@ -27,7 +27,7 @@ public class DatadriveDemoTestng {
 
 
     @Test(dataProvider = "formdata",dataProviderClass = ExcelDataProvider.class)
-    public void datadrive(String firstname, String lastname,String email ,String msg) throws InterruptedException {
+    public void datadrive(String firstname,String lastname,String email,String msg) throws InterruptedException {
 
         String title = driver.getTitle();
         System.out.println("Page Title: " + title);
