@@ -50,8 +50,10 @@ public class ass6 {
         WebElement toInputLocators = driver.findElement(By.xpath("//label[normalize-space()='To']/following-sibling::input"));
         toInputLocators.click();
         toInputLocators.sendKeys("Kolkata");
-        WebElement CCU = driver.findElement(By.xpath("//span[contains(@class,'text-primary') and contains(@class,'text-sm') and normalize-space(text())='CCU']"));
         Thread.sleep(3000);
+        WebElement CCU = driver.findElement(By.xpath("//div[@role='listitem'][.//span[normalize-space()='CCU']]"));
+        wait.until(ExpectedConditions.elementToBeClickable(CCU)).click();
+
         CCU.click();
    }
 }
